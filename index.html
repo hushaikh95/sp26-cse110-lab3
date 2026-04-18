@@ -8,11 +8,25 @@
       content="Meeting minutes for the Pomodoro Timer product team brainstorm on April 13, 2026."
     />
     <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Internal CSS example required by the lab */
+      .internal-note {
+        letter-spacing: 0.02em;
+        border-left: 4px solid #4a5568;
+      }
+    </style>
     <title>Pomodoro Timer First Brainstorm — Meeting Minutes</title>
   </head>
-  <body>
+  <body data-page="minutes">
     <header>
-      <h1>Pomodoro Timer First Brainstorm</h1>
+      <h1 style="text-transform: uppercase">Pomodoro Timer First Brainstorm</h1>
       <p>
         <strong>Meeting type:</strong> <span>brainstorming &amp; scope</span>
         <br />
@@ -31,6 +45,9 @@
     <main>
       <section id="attendance">
         <h2>Attendance</h2>
+        <p class="internal-note" role="note">
+          Team attendance confirms quorum and context for each action item.
+        </p>
         <p>
           <em>Present:</em> Avery, Jordan, Sam, Riley, Morgan.
           <b>Absent (excused):</b> Casey.
@@ -49,7 +66,7 @@
       <section id="agenda">
         <h2>Agenda</h2>
         <p>We agreed to keep the session to <strong>45 minutes</strong> and focus on outcomes, not tooling debates.</p>
-        <ol>
+        <ol class="agenda-list">
           <li>Set Goals for the Project <abbr title="minimum viable product">MVP</abbr></li>
           <li>Review open questions from last week</li>
           <li>Sketch flows for start / pause / reset</li>

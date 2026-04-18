@@ -1,0 +1,451 @@
+/* Lab 3 CSS: base layout + external stylesheet */
+
+:root {
+  --surface-bg: #f7f9fc;
+  --ink: rgb(34, 38, 49);
+  --accent: hsl(214, 84%, 56%);
+  --accent-soft: hsla(214, 84%, 56%, 0.2);
+  --card-bg: color(display-p3 0.97 0.99 1 / 1);
+  --brand-mix: color-mix(in srgb, #4f46e5 70%, orange 30%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  padding: 1.5rem 2rem 2.5rem 2rem;
+  border-style: solid;
+  border-color: rgba(59, 130, 246, 0.2);
+  border-width: 0 0 0.2cm 0;
+  border-radius: 0;
+  max-width: 72rem;
+  min-width: 320px;
+  width: 92%;
+  color: var(--ink, #1f2937);
+  background-color: var(--surface-bg, #ffffff);
+  font-family: "Inter", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+header {
+  margin: 0 0 1.25rem 0;
+  padding: 1rem 1.25rem 1rem 1.25rem;
+  border: 2px solid var(--brand-mix);
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+h1,
+h2 {
+  color: #1d4ed8;
+  text-decoration: underline;
+  text-align: left;
+}
+
+h3 {
+  color: color-mix(in oklab, #0f172a 65%, #38bdf8 35%);
+}
+
+nav a {
+  display: inline;
+  color: #0f3d91;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav a:active {
+  color: red;
+}
+
+main > section {
+  margin: 1.5rem 0.5rem 1.5rem 0.5rem;
+  padding-top: 0.75rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  border-style: solid;
+  border-color: #dbeafe;
+  border-width: 1px;
+  border-radius: 0.5rem;
+  background-color: #fff;
+}
+
+section#agenda {
+  position: relative;
+}
+
+section#materials {
+  position: static;
+}
+
+audio,
+video {
+  display: block;
+  width: 320px;
+  max-width: 100%;
+  min-width: 200px;
+}
+
+img[alt*="whiteboard"] {
+  border: 3px dashed #7c3aed;
+  border-radius: 10px;
+  width: 20rem;
+  max-width: 100%;
+  height: auto;
+}
+
+form {
+  display: block;
+}
+
+button {
+  background-color: #2563eb;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  padding: 0.5rem 0.85rem;
+  margin-right: 0.25in;
+}
+
+/* Required display value */
+summary {
+  display: inline-block;
+}
+
+/* Selector list */
+abbr,
+q {
+  color: #374151;
+}
+
+/* Descendant combinator */
+footer p {
+  text-align: center;
+}
+
+/* Child combinator */
+section > h2 {
+  margin-top: 0;
+}
+
+/* General sibling combinator */
+h3 ~ p {
+  margin-top: 0.35rem;
+}
+
+/* Adjacent sibling combinator */
+h2 + p {
+  margin-top: 0.2rem;
+}
+
+/* Combined selector */
+ol.agenda-list {
+  border-left: 4px solid #93c5fd;
+  padding-left: 1.1rem;
+}
+
+/* New selector: :has() */
+section:has(video) {
+  box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.15);
+}
+
+/* Nested selectors (2023) */
+header {
+  & a {
+    font-weight: 600;
+  }
+}
+
+/* Use sticky positioning */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+@media (max-width: 900px) {
+  body {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    width: 100%;
+    border-width: 0;
+  }
+
+  nav div {
+    display: block;
+  }
+}
+/* Lab 3 CSS: meeting minutes styling checklist coverage */
+
+:root {
+  --surface-bg: #f7f9fc;
+  --ink: rgb(34, 38, 49);
+  --accent: hsl(214, 84%, 56%);
+  --accent-soft: hsla(214, 84%, 56%, 0.2);
+  --card-bg: color(display-p3 0.97 0.99 1 / 1);
+  --brand-mix: color-mix(in srgb, #4f46e5 70%, orange 30%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  padding: 1.5rem 2rem 2.5rem 2rem;
+  border-style: solid;
+  border-color: rgba(59, 130, 246, 0.2);
+  border-width: 0 0 0.2cm 0;
+  border-radius: 0;
+  max-width: 72rem;
+  min-width: 320px;
+  width: 92%;
+  color: var(--ink, #1f2937);
+  background-color: var(--surface-bg, #ffffff);
+  font-family: "Inter", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+header {
+  margin: 0 0 1.25rem 0;
+  padding: 1rem 1.25rem 1rem 1.25rem;
+  border: 2px solid var(--brand-mix);
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+h1,
+h2 {
+  color: #1d4ed8;
+  text-decoration: underline;
+  text-align: left;
+}
+
+h3 {
+  color: color-mix(in oklab, #0f172a 65%, #38bdf8 35%);
+}
+
+nav a {
+  display: inline;
+  color: #0f3d91;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav a:active {
+  color: red;
+}
+
+main > section {
+  margin: 1.5rem 0.5rem 1.5rem 0.5rem;
+  padding-top: 0.75rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  border-style: solid;
+  border-color: #dbeafe;
+  border-width: 1px;
+  border-radius: 0.5rem;
+  background-color: #fff;
+}
+
+section#agenda {
+  position: relative;
+}
+
+section#materials {
+  position: static;
+}
+
+audio,
+video {
+  display: block;
+  width: 320px;
+  max-width: 100%;
+  min-width: 200px;
+}
+
+img[alt*="whiteboard"] {
+  border: 3px dashed #7c3aed;
+  border-radius: 10px;
+  width: 20rem;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Flexbox section (3+ children, 3+ flex properties) */
+.status-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  margin: 0.8em 0 0.25em 0;
+}
+
+.chip {
+  display: inline-block;
+  padding: 0.3rem 0.55rem 0.3rem 0.55rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+.chip.done {
+  background-color: #dcfce7;
+}
+
+.chip.blocked {
+  background-color: rgba(248, 113, 113, 0.2);
+}
+
+.chip.next {
+  background-color: var(--accent-soft, #bfdbfe);
+}
+
+/* Grid section (3+ children, 3+ grid properties) */
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(8rem, 1fr));
+  gap: 0.75rem;
+  align-items: stretch;
+  margin: 1rem 0 0 0;
+}
+
+.resource-card {
+  padding: 0.6rem 0.75rem 0.6rem 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: var(--card-bg, #eef2ff);
+}
+
+form {
+  display: block;
+}
+
+button {
+  background-color: #2563eb;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  padding: 0.5rem 0.85rem;
+  margin-right: 0.25in;
+}
+
+.ghost-button {
+  background-color: #e2e8f0;
+  color: #1f2937;
+}
+
+/* Required display value */
+summary {
+  display: inline-block;
+}
+
+/* Selector list */
+abbr,
+q {
+  color: #374151;
+}
+
+/* Descendant combinator */
+footer p {
+  text-align: center;
+}
+
+/* Child combinator */
+section > h2 {
+  margin-top: 0;
+}
+
+/* General sibling combinator */
+h3 ~ p {
+  margin-top: 0.35rem;
+}
+
+/* Adjacent sibling combinator */
+h2 + p {
+  margin-top: 0.2rem;
+}
+
+/* Combined selector */
+ol.agenda-list {
+  border-left: 4px solid #93c5fd;
+  padding-left: 1.1rem;
+}
+
+/* New selector: :has() */
+section:has(video) {
+  box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.15);
+}
+
+/* Nested selectors (2023) */
+header {
+  & a {
+    font-weight: 600;
+  }
+}
+
+/* Use fixed/sticky and absolute positioning */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.ghost-button {
+  position: relative;
+  left: 0;
+}
+
+/* Demo of display:none */
+[data-page="minutes"] .ghost-button:hover {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  body {
+    padding: 1rem;
+  }
+
+  .resource-grid {
+    grid-template-columns: repeat(2, minmax(8rem, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    width: 100%;
+    border-width: 0;
+  }
+
+  nav div {
+    display: block;
+  }
+
+  .resource-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .status-row {
+    justify-content: center;
+  }
+}
