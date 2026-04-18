@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Meeting minutes for the Pomodoro Timer product team brainstorm on April 13, 2026."
+    />
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <title>Pomodoro Timer First Brainstorm — Meeting Minutes</title>
+  </head>
+  <body>
+    <header>
+      <h1>Pomodoro Timer First Brainstorm</h1>
+      <p>
+        <strong>Meeting type:</strong> <span>brainstorming &amp; scope</span>
+        <br />
+        <strong>Date:</strong> <time datetime="2026-04-13">April 13, 2026</time>
+      </p>
+      <nav aria-label="Minutes sections">
+        <div>
+          <a href="#attendance">Attendance</a> · <a href="#agenda">Agenda</a> ·
+          <a href="#unfinished">Unfinished business</a> · <a href="#new-business">New business</a> ·
+          <a href="#misc">Misc</a> · <a href="#materials">Diagrams &amp; recordings</a> ·
+          <a href="#feedback-form">Feedback form</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="attendance">
+        <h2>Attendance</h2>
+        <p>
+          <em>Present:</em> Avery, Jordan, Sam, Riley, Morgan.
+          <b>Absent (excused):</b> Casey.
+        </p>
+        <ul>
+          <li>Avery Wong — <i>facilitator</i></li>
+          <li>Jordan Lee — <i>notes</i></li>
+          <li>Sam Patel — engineering</li>
+          <li>Riley Chen — design</li>
+          <li>Morgan Diaz — PM</li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <section id="agenda">
+        <h2>Agenda</h2>
+        <p>We agreed to keep the session to <strong>45 minutes</strong> and focus on outcomes, not tooling debates.</p>
+        <ol>
+          <li>Set Goals for the Project <abbr title="minimum viable product">MVP</abbr></li>
+          <li>Review open questions from last week</li>
+          <li>Sketch flows for start / pause / reset</li>
+          <li>Decide what we ship in sprint one</li>
+        </ol>
+      </section>
+
+      <section id="unfinished">
+        <h2>Unfinished business</h2>
+        <h3>From last meeting</h3>
+        <p>
+          We still owe a written definition of <q>focus session</q> versus <q>break</q> so analytics stay consistent.
+          Riley will post a one-paragraph glossary in the shared doc by <strong>Wednesday</strong>.
+        </p>
+        <details>
+          <summary>Why this matters</summary>
+          <p>
+            Without shared terms, <span>reports will disagree on completion rates</span>. The glossary removes ambiguity for
+            future features like <em>long breaks</em> and <em>custom timers</em>.
+          </p>
+        </details>
+      </section>
+
+      <section id="new-business">
+        <h2>New business</h2>
+        <h3>Timer behavior</h3>
+        <p>
+          The team prefers a <b>single primary action</b> on the home screen: start focus. Secondary actions (skip break,
+          edit length) should stay one tap away, not buried in settings.
+        </p>
+        <h3>Accessibility</h3>
+        <p>
+          We will mirror the <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">MDN accessibility overview</a>
+          as a checklist while we prototype. Keyboard control and visible focus states are <em>non-negotiable</em> for the MVP.
+        </p>
+      </section>
+
+      <section id="misc">
+        <h2>Miscellaneous comments / questions / concerns</h2>
+        <ul>
+          <li>Morgan asked whether we need accounts for v1; consensus: <strong>no</strong>, local-first only.</li>
+          <li>Sam raised offline support; we will timebox a spike next week.</li>
+          <li>Open question: should breaks play sound by default? Tabled until user research returns.</li>
+        </ul>
+      </section>
+
+      <section id="materials">
+        <h2>Diagrams, architecture, and recordings</h2>
+        <p>Whiteboard snapshot from the session: financial planning diagram (goals, insurance, investments, and next steps).</p>
+        <p>
+          <img
+            src="https://media.tumblr.com/fa1b2e9d2e5464e495f81ca83da88533/tumblr_inline_mle2yerIZy1qz4rgp.jpg"
+            width="320"
+            height="240"
+            alt="Hand-drawn financial planning whiteboard: pyramid of needs from income to financial independence, disability coverage bar chart, retirement and college goals, life insurance notes, portfolio pie chart, current holdings, and action items."
+          />
+        </p>
+        <h3>Audio recording</h3>
+        <audio controls src="media/meeting-audio.wav">
+          Your browser does not support the audio element.
+        </audio>
+        <h3>Video recording</h3>
+        <video controls width="320" height="180">
+          <source src="media/meeting-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+    </main>
+
+    <hr />
+
+    <section id="feedback-form" aria-label="Unrelated practice form">
+      <h2>Practice form</h2>
+      <p>This form is only for HTML practice and does not submit anywhere.</p>
+      <form action="https://example.com" method="get">
+        <fieldset>
+          <legend>Team snack poll</legend>
+          <p>
+            <label for="participant">Your name</label><br />
+            <input id="participant" name="participant" type="text" autocomplete="name" />
+          </p>
+          <p>
+            <label for="birthday">Favorite meeting day (any date)</label><br />
+            <input id="birthday" name="favorite_day" type="date" />
+          </p>
+          <p>
+            <label for="snack">Pick a snack (with suggestions)</label><br />
+            <input id="snack" name="snack" type="text" list="snack-suggestions" />
+            <datalist id="snack-suggestions">
+              <option value="Apples"></option>
+              <option value="Granola"></option>
+              <option value="Dark chocolate"></option>
+            </datalist>
+          </p>
+          <p>
+            <label for="drink">Favorite Drink</label><br />
+            <select id="drink" name="drink">
+              <option value="">Choose one</option>
+              <option value="water">Water</option>
+              <option value="tea">Tea</option>
+              <option value="coffee">Coffee</option>
+            </select>
+          </p>
+          <p>Dietary notes:</p>
+          <p>
+            <textarea id="notes" name="notes" rows="4" cols="40" placeholder="Allergies, preferences, etc."></textarea>
+          </p>
+          <fieldset>
+            <legend>Allergies (checkboxes)</legend>
+            <label><input type="checkbox" name="allergy" value="nuts" /> Nuts</label><br />
+            <label><input type="checkbox" name="allergy" value="dairy" /> Dairy</label>
+          </fieldset>
+          <fieldset>
+            <legend>Pick one treat style (radio)</legend>
+            <label><input type="radio" name="treat" value="sweet" /> Sweet</label><br />
+            <label><input type="radio" name="treat" value="savory" /> Savory</label>
+          </fieldset>
+          <p>
+            <button type="submit">Submit (demo only)</button>
+          </p>
+        </fieldset>
+      </form>
+    </section>
+
+    <footer>
+      <p>
+        Minutes compiled by Humza Shaikh. Next meeting: <time datetime="2026-04-20">April 20, 2026</time>, 3:00&nbsp;p.m.
+      </p>
+    </footer>
+  </body>
+</html>
