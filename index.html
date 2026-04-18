@@ -102,6 +102,11 @@
           We will mirror the <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">MDN accessibility overview</a>
           as a checklist while we prototype. Keyboard control and visible focus states are <em>non-negotiable</em> for the MVP.
         </p>
+        <div class="status-row" aria-label="Task status chips">
+          <span class="chip done">MVP goals drafted</span>
+          <span class="chip blocked">Sound behavior pending</span>
+          <span class="chip next">Offline spike next week</span>
+        </div>
       </section>
 
       <section id="misc">
@@ -133,6 +138,20 @@
           <source src="media/meeting-video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+        <div class="resource-grid" aria-label="Supporting links and files">
+          <article class="resource-card">
+            <h4>Raw notes</h4>
+            <p>Link to editable notes used during the session.</p>
+          </article>
+          <article class="resource-card">
+            <h4>Architecture sketch</h4>
+            <p>Contains timer states and transition assumptions.</p>
+          </article>
+          <article class="resource-card">
+            <h4>User stories</h4>
+            <p>Draft stories for sprint one prioritization.</p>
+          </article>
+        </div>
       </section>
     </main>
 
@@ -186,6 +205,7 @@
           </fieldset>
           <p>
             <button type="submit">Submit (demo only)</button>
+            <button type="button" class="ghost-button">Clear fields</button>
           </p>
         </fieldset>
       </form>
