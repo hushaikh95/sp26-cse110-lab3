@@ -287,6 +287,13 @@ section:has(video) {
   box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.15);
 }
 
+/* Nested selectors (2023) requirement */
+header {
+  & a {
+    font-weight: 600;
+  }
+}
+
 /* Equivalent non-nested selector for validator compatibility */
 header a {
   font-weight: 600;
