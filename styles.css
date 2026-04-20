@@ -172,31 +172,35 @@ form {
   display: block;
 }
 
-#feedback-form {
+section#feedback-form {
   margin: 1.5rem 0.5rem 1.5rem 0.5rem;
   padding: 1rem 1.1rem 1.15rem 1.1rem;
   border: 1px solid #d7e5ff;
   border-radius: 0.9rem;
-  background-color: rgba(255, 255, 255, 0.96);
+  background-color: #ffffff;
   box-shadow: 0 10px 24px rgba(30, 64, 175, 0.1);
 }
 
-#feedback-form fieldset {
+section#feedback-form > form {
+  background-color: #ffffff;
+}
+
+section#feedback-form fieldset {
   border: 1px solid #c6d8ff;
   border-radius: 0.55rem;
   padding: 0.8rem 0.9rem;
   background-color: #f8fbff;
 }
 
-#feedback-form legend {
+section#feedback-form legend {
   color: #1e3a8a;
   font-weight: 600;
   padding: 0 0.25rem;
 }
 
-#feedback-form input,
-#feedback-form select,
-#feedback-form textarea {
+section#feedback-form input,
+section#feedback-form select,
+section#feedback-form textarea {
   border: 1px solid #b8cdfa;
   border-radius: 0.4rem;
   padding: 0.4rem 0.45rem;
@@ -204,9 +208,9 @@ form {
   color: #1f2937;
 }
 
-#feedback-form input:focus,
-#feedback-form select:focus,
-#feedback-form textarea:focus {
+section#feedback-form input:focus,
+section#feedback-form select:focus,
+section#feedback-form textarea:focus {
   outline: 2px solid rgba(37, 99, 235, 0.28);
   border-color: #3b82f6;
 }
@@ -229,8 +233,8 @@ button:hover {
 }
 
 .ghost-button {
-  background-color: #e2e8f0;
-  color: #1f2937;
+  background: linear-gradient(120deg, #2563eb, #4f46e5);
+  color: white;
 }
 
 /* Required display value */
@@ -300,11 +304,6 @@ header {
 .ghost-button {
   position: relative;
   left: 0;
-}
-
-/* Demo of display:none */
-[data-page="minutes"] .ghost-button:hover {
-  display: none;
 }
 
 hr {
